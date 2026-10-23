@@ -104,8 +104,9 @@ document.getElementById('contact-form').addEventListener('submit', (e) => {
     const phone = form.phone.value;
     const pincode = form.pincode.value;
     const bill = form.bill.value;
+    const site = form.site ? form.site.value : '';
 
-    const message = `Hi Ellipse Solar,\n\nI am interested in solar installation.\n\nName: ${name}\nWhatsApp: ${phone}\nPincode: ${pincode}\nMonthly Bill: ${bill}\n\nPlease share details and a quote.`;
+    const message = `Hi Ellipse Solar,\n\nI am interested in solar installation.\n\nName: ${name}\nWhatsApp: ${phone}\nPincode: ${pincode}\nSite: ${site}\nMonthly Bill: ${bill}\n\nPlease share details and a quote.`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/919216054155?text=${encoded}`, '_blank');
@@ -122,8 +123,9 @@ document.getElementById('popup-form').addEventListener('submit', (e) => {
     const phone = form.phone.value;
     const pincode = form.pincode.value;
     const bill = form.bill.value;
+    const site = form.site ? form.site.value : '';
 
-    const message = `Hi Ellipse Solar,\n\nI am interested in solar installation.\n\nName: ${name}\nWhatsApp: ${phone}\nPincode: ${pincode}\nMonthly Bill: ${bill}\n\nPlease share details and a quote.`;
+    const message = `Hi Ellipse Solar,\n\nI am interested in solar installation.\n\nName: ${name}\nWhatsApp: ${phone}\nPincode: ${pincode}\nSite: ${site}\nMonthly Bill: ${bill}\n\nPlease share details and a quote.`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/919216054155?text=${encoded}`, '_blank');
