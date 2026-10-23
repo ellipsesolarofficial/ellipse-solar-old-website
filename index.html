@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipse Solar | Powering a Sustainable Future</title>
+    <meta name="description" content="Ellipse Solar - Your trusted solar EPC partner. We design, install, and maintain rooftop and ground-mount solar systems for homes, businesses, and industries.">
+    <meta name="theme-color" content="#f97316">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="images/logo.svg" alt="Ellipse Solar" class="nav__logo-img">
+            </a>
+            <ul class="nav__menu" id="nav-menu">
+                <li><a href="#home" class="nav__link active">Home</a></li>
+                <li><a href="#services" class="nav__link">Services</a></li>
+                <li><a href="#why-us" class="nav__link">Why Us</a></li>
+                <li><a href="#process" class="nav__link">Process</a></li>
+                <li><a href="#projects" class="nav__link">Projects</a></li>
+                <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+                <li><a href="#calculator" class="nav__link">Calculator</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn--primary nav__cta">Get Free Quote</a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <img src="images/hero.webp" alt="Solar panels installation by Ellipse Solar" loading="eager">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="container hero__container">
+            <div class="hero__content reveal">
+                <p class="hero__badge">✓ Trusted by 500+ Happy Customers</p>
+                <h1 class="hero__title">Make Your Electricity<br><span class="hero__free">FREE</span><br><span class="highlight">Earn From Every Extra Unit.</span></h1>
+                <p class="hero__subtitle">Generate your own power. What you don't use gets sold back to the grid — turning your rooftop into a revenue source, not an expense.</p>
+                <div class="hero__stats">
+                    <div class="hero__stat"><strong>500+</strong><span>Installations</span></div>
+                    <div class="hero__stat"><strong>10MW+</strong><span>Capacity</span></div>
+                    <div class="hero__stat"><strong>98%</strong><span>Satisfaction</span></div>
+                </div>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary btn--lg">Get Free Consultation →</a>
+                    <a href="#process" class="btn btn--white btn--lg">How It Works</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">Our Services</span>
+                <h2>Solar Solutions for Every Need</h2>
+                <p>End-to-end solar EPC solutions tailored to your requirements.</p>
+            </div>
+            <div class="services__grid">
+                <div class="card reveal">
+                    <div class="card__img"><img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=400&q=80" alt="Residential solar panels on home roof" loading="lazy"></div>
+                    <h3>Residential Solar</h3>
+                    <p>Save up to 90% on electricity bills with a custom rooftop solar system.</p>
+                    <a href="#contact" class="card__link">Get Started →</a>
+                </div>
+                <div class="card reveal">
+                    <div class="card__img"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=400&q=80" alt="Commercial solar installation on office building" loading="lazy"></div>
+                    <h3>Commercial Solar</h3>
+                    <p>Power your business with clean energy. Reduce costs and go green.</p>
+                    <a href="#contact" class="card__link">Get Started →</a>
+                </div>
+                <div class="card reveal">
+                    <div class="card__img"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=400&q=80" alt="Large-scale industrial solar farm" loading="lazy"></div>
+                    <h3>Industrial Solar</h3>
+                    <p>Large-scale ground-mount and rooftop installations for factories.</p>
+                    <a href="#contact" class="card__link">Get Started →</a>
+                </div>
+                <div class="card reveal">
+                    <div class="card__img"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&q=80" alt="Solar panel maintenance and monitoring" loading="lazy"></div>
+                    <h3>O&M Services</h3>
+                    <p>Regular maintenance to keep your system at peak efficiency.</p>
+                    <a href="#contact" class="card__link">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+
+    <!-- Solar Calculator -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">Solar Calculator</span>
+                <h2>Calculate Your Solar Savings</h2>
+                <p>Enter your details to see how much you can save with solar energy.</p>
+            </div>
+            <div class="calc__wrapper reveal">
+                <div class="calc__form">
+                    <div class="calc__group">
+                        <label>Your Monthly Electricity Bill</label>
+                        <div class="calc__input-wrap">
+                            <span class="calc__prefix">₹</span>
+                            <input type="number" id="calc-bill" placeholder="e.g. 3000" min="500" max="100000" value="3000">
+                        </div>
+                        <input type="range" id="calc-slider" min="500" max="15000" step="100" value="3000" class="calc__slider">
+                        <div class="calc__range-labels"><span>₹500</span><span>₹15,000</span></div>
+                    </div>
+                    <div class="calc__group">
+                        <label>Your City</label>
+                        <select id="calc-city">
+                            <option value="4.5">Punjab / Haryana / Rajasthan</option>
+                            <option value="4.2">Delhi NCR / UP</option>
+                            <option value="4.0">Gujarat / Maharashtra</option>
+                            <option value="3.8">Karnataka / Tamil Nadu</option>
+                            <option value="3.5">Other</option>
+                        </select>
+                    </div>
+                    <button class="btn btn--primary btn--lg btn--full" id="calc-btn">Calculate Savings →</button>
+                </div>
+                <div class="calc__results" id="calc-results">
+                    <div class="calc__result-header">
+                        <h3>Your Estimated Savings</h3>
+                    </div>
+                    <div class="calc__result-grid">
+                        <div class="calc__result-item">
+                            <small>Recommended System</small>
+                            <strong id="res-system">3 kW</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>Monthly Savings</small>
+                            <strong id="res-monthly" class="text-green">₹2,550</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>Annual Savings</small>
+                            <strong id="res-annual" class="text-green">₹30,600</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>25-Year Savings</small>
+                            <strong id="res-lifetime" class="text-green">₹7.7 Lakh</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>Approx. System Cost</small>
+                            <strong id="res-cost">₹1,65,000</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>Govt. Subsidy</small>
+                            <strong id="res-subsidy" class="text-primary">₹78,000</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>Cost After Subsidy</small>
+                            <strong id="res-net-cost">₹87,000</strong>
+                        </div>
+                        <div class="calc__result-item">
+                            <small>Payback Period</small>
+                            <strong id="res-payback">2.8 Years</strong>
+                        </div>
+                    </div>
+                    <div class="calc__result-cta">
+                        <p>Want an exact quote for your rooftop?</p>
+                        <a href="#contact" class="btn btn--primary">Book Free Site Survey →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">Why Ellipse Solar</span>
+                <h2>Why Customers Trust Us</h2>
+            </div>
+            <div class="why-us__grid">
+                <div class="why-us__item reveal">
+                    <div class="why-us__icon">⚡</div>
+                    <strong>Guaranteed Savings</strong>
+                    <p>Measurable savings backed by performance monitoring and transparent reports.</p>
+                </div>
+                <div class="why-us__item reveal">
+                    <div class="why-us__icon">✅</div>
+                    <strong>End-to-End Service</strong>
+                    <p>Design, installation, subsidy paperwork — we handle everything.</p>
+                </div>
+                <div class="why-us__item reveal">
+                    <div class="why-us__icon">🛡️</div>
+                    <strong>Premium Quality</strong>
+                    <p>Tier-1 panels and inverters with robust structures built for Indian weather.</p>
+                </div>
+                <div class="why-us__item reveal">
+                    <div class="why-us__icon">❤️</div>
+                    <strong>25-Year Support</strong>
+                    <p>Long-term maintenance and support for the life of your system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">How It Works</span>
+                <h2>Simple 4-Step Process</h2>
+                <p>Going solar has never been easier.</p>
+            </div>
+            <div class="process__grid">
+                <div class="process__step reveal">
+                    <div class="step-num">1</div>
+                    <h3>Free Site Survey</h3>
+                    <p>We assess your rooftop and energy needs on-site.</p>
+                </div>
+                <div class="process__step reveal">
+                    <div class="step-num">2</div>
+                    <h3>Custom Design</h3>
+                    <p>Optimized system for maximum generation.</p>
+                </div>
+                <div class="process__step reveal">
+                    <div class="step-num">3</div>
+                    <h3>Installation & Subsidy</h3>
+                    <p>Professional install + complete paperwork handling.</p>
+                </div>
+                <div class="process__step reveal">
+                    <div class="step-num">4</div>
+                    <h3>Monitor & Maintain</h3>
+                    <p>Savings from day one. We handle maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container stats__grid">
+            <div class="stats__item reveal">
+                <span class="stats__num" data-target="500">0</span><span class="stats__suf">+</span>
+                <small>Installations</small>
+            </div>
+            <div class="stats__item reveal">
+                <span class="stats__num" data-target="10">0</span><span class="stats__suf">MW+</span>
+                <small>Capacity</small>
+            </div>
+            <div class="stats__item reveal">
+                <span class="stats__num" data-target="15">0</span><span class="stats__suf">Cr+</span>
+                <small>Savings Delivered</small>
+            </div>
+            <div class="stats__item reveal">
+                <span class="stats__num" data-target="8">0</span><span class="stats__suf">+</span>
+                <small>Cities Served</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">Our Work</span>
+                <h2>Recent Projects</h2>
+            </div>
+            <div class="projects__grid">
+                <div class="project reveal">
+                    <div class="project__img">
+                        <img src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?w=500&q=80" alt="Residential rooftop solar installation" loading="lazy">
+                    </div>
+                    <div class="project__info">
+                        <h3>10kW Rooftop</h3>
+                        <p>Residential • Saves ₹12,000/mo</p>
+                    </div>
+                </div>
+                <div class="project reveal">
+                    <div class="project__img">
+                        <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=500&q=80" alt="Commercial solar panel installation on office building" loading="lazy">
+                    </div>
+                    <div class="project__info">
+                        <h3>50kW Commercial</h3>
+                        <p>Office Complex • Saves ₹60,000/mo</p>
+                    </div>
+                </div>
+                <div class="project reveal">
+                    <div class="project__img">
+                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=500&q=80" alt="Large-scale industrial solar farm" loading="lazy">
+                    </div>
+                    <div class="project__info">
+                        <h3>100kW Industrial</h3>
+                        <p>Factory • Saves ₹1.2L/mo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonials__grid">
+                <div class="testimonial reveal">
+                    <p class="testimonial__stars">★★★★★</p>
+                    <p>"Ellipse Solar made the entire process seamless. My electricity bills dropped by 85%!"</p>
+                    <div class="testimonial__author"><strong>Rajesh Sharma</strong> • Homeowner, 8kW</div>
+                </div>
+                <div class="testimonial reveal">
+                    <p class="testimonial__stars">★★★★★</p>
+                    <p>"The team was knowledgeable and completed our 50kW installation on time. Substantial savings."</p>
+                    <div class="testimonial__author"><strong>Priya Patel</strong> • Business Owner, 50kW</div>
+                </div>
+                <div class="testimonial reveal">
+                    <p class="testimonial__stars">★★★★★</p>
+                    <p>"Excellent after-sales service. Proactive monitoring and on-schedule maintenance. Highly recommend."</p>
+                    <div class="testimonial__author"><strong>Amit Kumar</strong> • Society Chairman, 30kW</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta reveal">
+        <div class="container">
+            <div class="cta__box">
+                <h2>Ready to Save ₹12,000+ Every Month?</h2>
+                <p>Get a free consultation and see how much you can save with solar.</p>
+                <a href="#contact" class="btn btn--white btn--lg">Get Your Free Quote →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="tag">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq__list reveal">
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false"><span>How much can I save with solar?</span><span class="faq__icon">+</span></button>
+                    <div class="faq__a"><p>Most homeowners save 70-90% on electricity bills. We provide a detailed estimate during our free consultation.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false"><span>What is the government subsidy?</span><span class="faq__icon">+</span></button>
+                    <div class="faq__a"><p>Under PM Surya Ghar, residential customers get up to ₹78,000 subsidy for systems up to 3kW. We handle all paperwork.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false"><span>How long does installation take?</span><span class="faq__icon">+</span></button>
+                    <div class="faq__a"><p>Residential: 2-3 days. Commercial: 1-4 weeks. Full process from survey to commissioning: 2-4 weeks.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false"><span>What is the lifespan of a solar system?</span><span class="faq__icon">+</span></button>
+                    <div class="faq__a"><p>Solar panels last 25-30 years. Inverters last 10-15 years. We provide warranties and long-term support.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false"><span>Do panels work during monsoon?</span><span class="faq__icon">+</span></button>
+                    <div class="faq__a"><p>Yes — reduced capacity on cloudy days but systems deliver significant annual savings regardless.</p></div>
+                </div>
+                <div class="faq__item">
+                    <button class="faq__q" aria-expanded="false"><span>Do you offer financing?</span><span class="faq__icon">+</span></button>
+                    <div class="faq__a"><p>Yes. Easy EMI options with zero down payment — often less than your current electricity bill.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container contact__wrapper">
+            <div class="contact__info reveal">
+                <span class="tag">Get In Touch</span>
+                <h2>Ready to Go Solar?</h2>
+                <p>Free consultation and customized quote for your property.</p>
+                <div class="contact__details">
+                    <div class="contact__item">📞 <strong>+91 92160 54155</strong></div>
+                    <div class="contact__item">✉️ info@ellipsesolar.in</div>
+                    <div class="contact__item">📍 Punjab, India</div>
+                </div>
+            </div>
+            <form class="contact__form reveal reveal--delay" id="contact-form">
+                <h3 class="form__title">Get Your Free Quote</h3>
+                <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your name" required></div>
+                <div class="form-group"><label for="phone">WhatsApp Number</label><input type="tel" id="phone" name="phone" placeholder="Your WhatsApp number" required></div>
+                <div class="form-group"><label for="pincode">Pincode</label><input type="text" id="pincode" name="pincode" placeholder="Your area pincode" required></div>
+                <div class="form-group">
+                    <label>Monthly Electricity Bill</label>
+                    <div class="bill-options">
+                        <label class="bill-option"><input type="radio" name="bill" value="Less than ₹1500" required><span>Less than ₹1,500</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="₹1500 - ₹2500"><span>₹1,500 - ₹2,500</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="₹2500 - ₹4000"><span>₹2,500 - ₹4,000</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="₹4000 - ₹8000"><span>₹4,000 - ₹8,000</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="More than ₹8000"><span>More than ₹8,000</span></label>
+                    </div>
+                </div>
+                <div class="form-group form-group--checkbox">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I agree to the <a href="terms.html" target='_blank'>Terms & Conditions</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg btn--full">Book Free Consultation →</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <strong class="footer__logo"><img src="images/logo.svg" alt="Ellipse Solar" style="height:32px;"></strong>
+                <p>Your trusted partner for solar energy solutions. Powering a sustainable future.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Services</h4>
+                <a href="#services">Residential</a>
+                <a href="#services">Commercial</a>
+                <a href="#services">Industrial</a>
+                <a href="#services">O&M</a>
+            </div>
+            <div class="footer__links">
+                <h4>Company</h4>
+                <a href="#why-us">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer__links">
+                <h4>Connect</h4>
+                <a href="#contact">Get Quote</a>
+                <a href="#">Privacy Policy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p>© 2026 Ellipse Solar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/919216054155?text=Hi%20Ellipse%20Solar%2C%20I%20am%20interested%20in%20solar%20installation.%20Please%20share%20details." class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32" width="32" height="32" fill="#fff"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.129 6.742 3.047 9.379L1.054 31.27l6.1-1.953A15.9 15.9 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.335 22.594c-.39 1.1-1.932 2.013-3.17 2.28-.846.18-1.95.324-5.67-1.218-4.762-1.972-7.826-6.81-8.064-7.125-.23-.316-1.932-2.573-1.932-4.905s1.223-3.48 1.657-3.957c.39-.43 1.032-.644 1.646-.644.199 0 .378.01.538.018.434.02.651.046.937.724.358.847 1.23 3.003 1.338 3.222.11.218.218.512.07.808-.14.298-.262.43-.48.676-.218.247-.426.437-.644.703-.199.23-.422.476-.176.91.247.434 1.097 1.808 2.355 2.929 1.62 1.442 2.985 1.89 3.41 2.098.434.208.687.178.94-.108.262-.294 1.11-1.294 1.407-1.738.288-.434.586-.362.984-.218.402.14 2.549 1.202 2.983 1.42.434.218.723.326.832.512.108.186.108 1.086-.282 2.186z"/></svg>
+    </a>
+
+    <!-- Popup Form -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup">
+            <button class="popup__close" id="popup-close" aria-label="Close popup">&times;</button>
+            <h3 class="popup__title">Get Your Free Solar Quote</h3>
+            <p class="popup__subtitle">Find out how much you can save with solar energy.</p>
+            <form class="popup__form" id="popup-form">
+                <div class="form-group"><input type="text" name="name" placeholder="Your Name" required></div>
+                <div class="form-group"><input type="tel" name="phone" placeholder="WhatsApp Number" required></div>
+                <div class="form-group"><input type="text" name="pincode" placeholder="Pincode" required></div>
+                <div class="form-group">
+                    <label class="popup__label">Monthly Electricity Bill</label>
+                    <div class="bill-options">
+                        <label class="bill-option"><input type="radio" name="bill" value="Less than ₹1500" required><span>< ₹1,500</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="₹1500 - ₹2500"><span>₹1,500 - ₹2,500</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="₹2500 - ₹4000"><span>₹2,500 - ₹4,000</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="₹4000 - ₹8000"><span>₹4,000 - ₹8,000</span></label>
+                        <label class="bill-option"><input type="radio" name="bill" value="More than ₹8000"><span>> ₹8,000</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg btn--full">Book Free Consultation →</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
