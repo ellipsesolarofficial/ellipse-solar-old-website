@@ -141,44 +141,30 @@ const calcBtn = document.getElementById('calc-btn');
 const calcCity = document.getElementById('calc-city');
 
 function calculateSavings() {
-    const bill = parseInt(calcBill.value) || 3000;
-    const sunHours = parseFloat(calcCity.value);
-
-    const tariff = 7;
-    const monthlyUnits = bill / tariff;
-    const dailyUnits = monthlyUnits / 30;
-    const systemKW = Math.ceil(dailyUnits / sunHours * 10) / 10;
-    const roundedKW = Math.ceil(systemKW);
-
+    const bill = parseInt(calcBill.value, 10) || 3000;
+    const sunHours = parseFloat(calcCity.value) || 5.15;
+    const dailyUnits = (bill / 7.5) / 30;
+    const roundedKW = Math.max(1, Math.ceil(dailyUnits / sunHours));
     const monthlySavings = Math.round(bill * 0.85);
     const annualSavings = monthlySavings * 12;
-    const lifetimeSavings = annualSavings * 25;
+    const centralSubsidy = 95000;
+    const stateSubsidy = 17000;
+    const netCost = Math.max(0, roundedKW * 55000 - centralSubsidy - stateSubsidy);
+    const paybackYears = annualSavings > 0 ? netCost / annualSavings : 0;
 
-    const costPerKW = 55000;
-    const systemCost = roundedKW * costPerKW;
-
-    let subsidy = 0;
-    if (roundedKW <= 2) subsidy = roundedKW * 30000;
-    else if (roundedKW <= 3) subsidy = 60000 + (roundedKW - 2) * 18000;
-    else subsidy = 78000;
-
-    const netCost = systemCost - subsidy;
-    const paybackYears = (netCost / annualSavings).toFixed(1);
-
-    document.getElementById('res-system').textContent = roundedKW + ' kW';
     document.getElementById('res-monthly').textContent = '₹' + monthlySavings.toLocaleString('en-IN');
     document.getElementById('res-annual').textContent = '₹' + annualSavings.toLocaleString('en-IN');
-    document.getElementById('res-lifetime').textContent = '₹' + (lifetimeSavings / 100000).toFixed(1) + ' Lakh';
-    document.getElementById('res-cost').textContent = '₹' + systemCost.toLocaleString('en-IN');
-    document.getElementById('res-subsidy').textContent = '₹' + subsidy.toLocaleString('en-IN');
-    document.getElementById('res-net-cost').textContent = '₹' + netCost.toLocaleString('en-IN');
-    document.getElementById('res-payback').textContent = paybackYears + ' Years';
+    document.getElementById('res-lifetime').textContent = '₹' + ((annualSavings * 25) / 100000).toFixed(1) + ' Lakh';
+    document.getElementById('res-subsidy').textContent = '₹' + centralSubsidy.toLocaleString('en-IN');
+    document.getElementById('res-state').textContent = '₹' + stateSubsidy.toLocaleString('en-IN');
+    document.getElementById('res-payback').textContent = paybackYears < 1 ? 'Under 1 year' : paybackYears.toFixed(1) + ' Years';
 }
 
 // Sync slider and input, auto-calculate
 calcSlider.addEventListener('input', () => { calcBill.value = calcSlider.value; calculateSavings(); });
 calcBill.addEventListener('input', () => { calcSlider.value = calcBill.value; calculateSavings(); });
 calcCity.addEventListener('change', calculateSavings);
+calculateSavings();
 calcBtn.addEventListener('click', () => {
     calculateSavings();
     document.getElementById('calc-results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
